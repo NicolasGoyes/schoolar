@@ -25,7 +25,7 @@ if(!$conn){
 }else{
     echo "Success Connection";
 }
-
+    pg_close();
 
 
 ?>
