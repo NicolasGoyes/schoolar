@@ -11,7 +11,11 @@
     $enc_pass = md5($passwd);
 
     //creamos otro sql que nos permita validar si el email existe
-    $sql_email_exist = "SELECT COUNT (email) as total FROM users WHERE email ='$email' LIMIT 1";
+    $sql_email_exist = "
+    SELECT COUNT (email) as total 
+    FROM users 
+    WHERE email ='$email' 
+    LIMIT 1";
     $res = pg_query($conn, $sql_email_exist);
 
     if ($res){
