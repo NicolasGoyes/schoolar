@@ -1,11 +1,17 @@
 <?php 
 //create database config connection
+$host ="aws-0-us-east-1.pooler.supabase.com"; //o la ip 127.0.0.1
+$port ="6543"; //es el puerto de la base de datos 
+$dbname ="postgres";
+$user ="postgres.afhvxdizoormgkerlpna";
+$password ="unicesmag@@"; //depende del caso
+/*
 $host ="localhost"; //o la ip 127.0.0.1
 $port ="5432"; //es el puerto de la base de datos 
 $dbname ="schoolar";
 $user ="postgres";
 $password ="unicesmag"; //depende del caso
-
+*/
 //create conection // se definen los parametros de cada uno 
 //luego validamos la conexion de cada uno
 $conn = pg_connect("
