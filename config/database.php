@@ -27,9 +27,10 @@ $conn = pg_connect("
 //validamos si la conexion no es satisfactoria entonces mandamos un error de lo contrario
 //mandamos la conexion satisfactoria
 if(!$conn){
-    die("Connection Error: " . pg_last_error());
+    //se le quita el comentario cuano se este programando mas no cuando se lo muestre al cliente
+    //die("Connection Error: " . pg_last_error()); //se comentaria esto porque no lo queremos mostrar al cliente 
 }else{
-    echo "Success Connection";
+   // echo "";
 }
    // pg_close();
 
