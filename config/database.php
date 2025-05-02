@@ -3,7 +3,7 @@
 $host ="aws-0-us-east-1.pooler.supabase.com"; //o la ip 127.0.0.1
 $port ="6543"; //es el puerto de la base de datos 
 $dbname ="postgres";
-$user ="postgres.afhvxdizoormgkerlpna";
+$user ="postgres.afhvxdizoormgkerlpna";//afhvxdizoormgkerlpna
 $password ="unicesmag@@"; //depende del caso
 /*
 $host ="localhost"; //o la ip 127.0.0.1
