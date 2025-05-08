@@ -31,7 +31,7 @@
         if ($row['total'] > 0){
             echo "Login OK";
             $_SESSION['user_id'] = $row['id'];
-            header('Refresh: 0, URL=http://localhost/schoolar/src/signin.html');
+            header('Refresh: 0, URL=http://localhost/schoolar/src/home.php');
         }
         else {
             echo "Login failed";
