@@ -3,7 +3,7 @@
 
     session_start();
     if(isset($_SESSION['user_id'])){
-        header('Refresh: 0, URL=http://localhost/schoolar/src/home.php');
+        header('Refresh: 0; URL=http://localhost/schoolar/src/home.php');
       
 
     }
@@ -23,15 +23,15 @@
     GROUP BY 
     id;
 ";
-    $res = pg_query($conn, $sql);
+    
     
    
     if ($res){
         $row = pg_fetch_assoc($res);
         if ($row['total'] > 0){
-            echo "Login OK";
+            //echo "Login OK";
             $_SESSION['user_id'] = $row['id'];
-            header('Refresh: 0, URL=http://localhost/schoolar/src/home.php');
+            header('Refresh: 0; URL=http://localhost/schoolar/src/home.php');
         }
         else {
             echo "Login failed";

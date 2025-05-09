@@ -20,21 +20,37 @@
             <td></td>
 
         </tr>
-        <tr>
-
-            <th>JoanC.</th>
-            <th>Ayala</th>
-            <th>joan@mail.com</th>
-            <th>Active</th>
-            <td><img src = "images/edit_icon.png" width="20">
-                <img src = "images/lupe_icon.png" width="20">
-                <img src = "images/trash_icon.png" width="20"></td>
-
-        </tr>
-        <?php
+        
+    <?php
         //here code print information
-        $sql ="SELECT";
-        ?>
+        $sql ="
+        select
+            firstname,
+            lastname,
+            email,
+            case when status = true then 'Active' else 'No active' end as status
+        from
+            users
+        ";
+    $res = pg_query($conn, $sql);
+    if(!$res){
+        echo "Query error";
+        exit;
+    }
+    while($row= pg_fetch_assoc($res)){
+        echo "<tr>";
+        echo "<td>".$row['firstname']."</td>";
+        echo "<td>".$row['lastname']."</td>";
+        echo "<td>".$row['email']."</td>";
+        echo "<td>".$row['status']."</td>";
+        echo "<td>";
+        echo "<a href=''> <img src = 'images/edit_icon.png' width='20'></a>";
+        echo "<a href=''> <img src = 'images/lupe_icon.png' width='20'></a>";
+        echo "<a href=''> <img src = 'images/trash_icon.png' width='20'></a>";
+        echo "</td>";
+        echo "</tr>";
+    }
+    ?>
     </table>
 </body>
 </html>

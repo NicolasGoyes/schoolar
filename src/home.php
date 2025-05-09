@@ -1,10 +1,10 @@
 <?php
     
    session_start();
-   if(isset($_SESSION['user_id'])){
+   if(!isset($_SESSION['user_id'])){
     header('Refresh:0; url=http://localhost/schoolar/src/signin.html');
    }
-  
+
     
 
 ?>
@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" href="src/icons/escuela.png">
 </head>
 <body>
-    <a href = "signin.html">Logout</a>
+    <a href = "logout.php">Logout</a>
 
 </body>
 </html>
