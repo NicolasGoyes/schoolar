@@ -23,10 +23,12 @@
     GROUP BY 
     id;
 ";
+
+$res = pg_query($conn,$sql);
     
     
    
-    if ($res){
+    if($res){
         $row = pg_fetch_assoc($res);
         if ($row['total'] > 0){
             //echo "Login OK";

@@ -17,7 +17,8 @@
             <th>Lastname</th>
             <th>E-mail</th>
             <th>Status</th>
-            <td></td>
+            <th>Photo</th>
+            <th>...</th>
 
         </tr>
         
@@ -25,6 +26,7 @@
         //here code print information
         $sql ="
         select
+            id,
             firstname,
             lastname,
             email,
@@ -43,12 +45,13 @@
         echo "<td>".$row['lastname']."</td>";
         echo "<td>".$row['email']."</td>";
         echo "<td>".$row['status']."</td>";
+        echo "<td align = 'center'><img src='photo_users/default_photo.png' width='20'></td>";
         echo "<td>";
         echo "<a href=''> <img src = 'images/edit_icon.png' width='20'></a>";
         echo "<a href=''> <img src = 'images/lupe_icon.png' width='20'></a>";
-        echo "<a href=''> <img src = 'images/trash_icon.png' width='20'></a>";
+        echo "<a href='http_//127.0.0.1/schoolar/src/delete.php'> <img src = 'images/trash_icon.png' width='20'></a>";
         echo "</td>";
-        echo "</tr>";
+        echo "</tr>";09
     }
     ?>
     </table>
